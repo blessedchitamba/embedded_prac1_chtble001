@@ -23,14 +23,14 @@ def main():
     input_list = [13, 15]
 
     
-    GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
+    GPIO.setup(output_list, GPIO.OUT, initial=GPIO.LOW)
     GPIO.setup(input_list, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
    # print("write your logic here")
 
     while True:
-    	GPIO.output(7, GPIO.HIGH)
+    	GPIO.output(output_list, GPIO.HIGH)
     	sleep(1)
-    	GPIO.output(7, GPIO.LOW)
+    	GPIO.output(output_list, GPIO.LOW)
     	sleep(1)
 
 
